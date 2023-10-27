@@ -9,20 +9,21 @@
     <div id="app">
       <div id="modalContainer" style="display: none">
         <div id="contactForm">
-          <button id="updateCurrent" onclick="updateCurrent()">Edit contact</button>
-          <button id="removeCurrent" onclick="removeCurrent()">Remove contact</button>
+          <button id="updateCurrent" onclick="updateCurrent()">Edit current card</button>
+          <button id="removeCurrent" onclick="removeCurrent()">Remove current card</button>
           <button id="closeButton" onclick="hideForm()">X Close</button>
           <br />
           <br />
+          <br />
+          <br />
           <form id="newContactForm">
-            <label>Add new contact:</label>
-            <label for="name">Name:</label>
+            <label for="name">Title:</label>
             <input type="text" id="name" name="name" /><br />
-            <label for="title">Title:</label>
+            <label for="title">Subtitle:</label>
             <input type="text" id="title" name="title" /><br />
-            <label for="profilePicture">Profile Picture URL:</label>
+            <label for="profilePicture">Main Image URL:</label>
             <input type="url" id="profilePicture" name="profilePicture" /><br />
-            <label for="companyLogo">Company Logo URL:</label>
+            <label for="companyLogo">Secondary Image URL:</label>
             <input type="url" id="companyLogo" name="companyLogo" /><br />
             <input type="submit" value="Submit" />
           </form>
@@ -37,10 +38,10 @@
             <td>
               <div id="picture-group">
                 <div id="profilePictureCircle" class="circle">
-                  <img id="profilePictureImage" src=""/>
+                  <img id="profilePictureImage" src="" />
                 </div>
                 <div id="companyLogoCircle" class="circle logo-group">
-                  <img id="companyLogoImage" src=""/>
+                  <img id="companyLogoImage" src="" />
                 </div>
               </div>
             </td>
@@ -52,7 +53,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <hr>
+              <hr />
             </td>
           </tr>
           <tr>
