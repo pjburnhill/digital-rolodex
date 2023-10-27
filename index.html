@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Profiles</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="modalContainer" style="display: none">
+        <div id="contactForm">
+          <button id="updateCurrent" onclick="updateCurrent()">Edit contact</button>
+          <button id="removeCurrent" onclick="removeCurrent()">Remove contact</button>
+          <button id="closeButton" onclick="hideForm()">X Close</button>
+          <br />
+          <br />
+          <form id="newContactForm">
+            <label>Add new contact:</label>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" /><br />
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" /><br />
+            <label for="profilePicture">Profile Picture URL:</label>
+            <input type="url" id="profilePicture" name="profilePicture" /><br />
+            <label for="companyLogo">Company Logo URL:</label>
+            <input type="url" id="companyLogo" name="companyLogo" /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div id="createContactEl">
+        <button id="manageButton" onclick="showForm()">Manage</button>
+      </div>
+      <div id="contactDisplay" style="display: none">
+        <table>
+          <tr>
+            <td>
+              <div id="picture-group">
+                <div id="profilePictureCircle" class="circle">
+                  <img id="profilePictureImage" src=""/>
+                </div>
+                <div id="companyLogoCircle" class="circle logo-group">
+                  <img id="companyLogoImage" src=""/>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h1 id="contactName"></h1>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p id="contactTitle"></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
