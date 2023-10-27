@@ -1,7 +1,7 @@
 let contacts = [];
 let currentContactIndex = 0;
 let contactDisplayTimer;
-let displayTime = 400;
+let displayTime = 60000;
 let isEditMode = false; // To track if we're editing an existing contact
 
 window.onload = function () {
