@@ -53,6 +53,10 @@ window.onload = function () {
     document.body.addEventListener('mouseout', function () {
       document.getElementById('createContactEl').style.display = 'none';
     });
+
+    document.getElementById('contactDisplay').addEventListener('click', function () {
+      loadNextContact();
+    });
   } catch (err) {
     console.error('Error during window.onload:', err);
   }
@@ -125,6 +129,15 @@ function displayContact(contact) {
     }, displayTime);
   } catch (err) {
     console.error('Error in displayContact:', err);
+  }
+}
+
+function loadNextContact() {
+  try {
+    currentContactIndex = (currentContactIndex + 1) % contacts.length;
+    displayContact(contacts[currentContactIndex]);
+  } catch (err) {
+    console.error('Error in loadNextContact:', err);
   }
 }
 
